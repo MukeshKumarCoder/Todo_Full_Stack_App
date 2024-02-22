@@ -9,7 +9,7 @@ const port = process.env.port;
 
 
 app.use(cors({
-  origin: ["https://vast-pear-elephant-toga.cyclic.app", "http://localhost:5173", "https://todoappmain.netlify.app"],
+  origin: ["https://ill-pear-hen-boot.cyclic.app", "http://localhost:5173", "https://todoappmain.netlify.app"],
   credentials: true
 }));
 app.use(express.json());
