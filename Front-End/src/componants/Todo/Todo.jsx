@@ -10,7 +10,9 @@ const Todo = ({ text, id, setUpdateUI }) => {
 
   const deleteTodo = async() => {
     try {
-       axios.delete(`${baceURL}/delete/${id}`);
+       axios.delete(`${baceURL}/delete/${id}`,{
+        withCredentials:true
+       });
       // console.log(res.data)
        setUpdateUI((prev)=> !prev);
     } catch (error) {

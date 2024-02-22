@@ -14,14 +14,18 @@ function App() {
   }, [updateUI]);
 
   const getTogo = async () => {
-    let res = await axios.get(baceURL);
+    let res = await axios.get(baceURL, {
+      withCredentials: true
+    });
     setAllTodos(res.data);
     // console.log(res.data)
   };
 
   const createTodo = async () => {
     try {
-      let res = await axios.post(`${baceURL}/create`, { todo: inputs });
+      let res = await axios.post(`${baceURL}/create`,{
+        withCredentials: true
+      }, { todo: inputs });
       // setAllTodos(res.data.data);
       setUpdateUI((prev)=> !prev);
       setInputs("");
