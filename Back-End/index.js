@@ -8,7 +8,10 @@ const app = express();
 const port = process.env.port;
 
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://vast-pear-elephant-toga.cyclic.app", "http://localhost:5173"],
+  credentials: true
+}));
 app.use(express.json());
 app.use("/todos", toDoRouter)
 
