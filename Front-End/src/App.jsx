@@ -23,12 +23,12 @@ function App() {
 
   const createTodo = async () => {
     try {
-      let res = await axios.post(`${baceURL}/create`,{
+      let res = await axios.post(`${baceURL}/create`, inputs, {
         withCredentials: true
-      }, { todo: inputs });
+      });
       // setAllTodos(res.data.data);
-      setUpdateUI((prev)=> !prev);
-      setInputs("");
+      // setUpdateUI((prev)=> !prev);
+      // setInputs("");
       console.log(res.data);
     } catch (error) {
       console.log("something went wrong", error);
@@ -49,14 +49,14 @@ function App() {
       </div>
       <div className="singleTodo">
         {/* <h1>{allTodos.todo}</h1> */}
-        {allTodos.map((singleTodo) => (
+        {/* {allTodos.map((singleTodo) => (
           <Todo
             key={singleTodo._id}
             text={singleTodo.todo}
             id={singleTodo._id}
             setUpdateUI={setUpdateUI}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
