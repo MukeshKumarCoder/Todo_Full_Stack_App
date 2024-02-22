@@ -1,0 +1,63 @@
+.todoContainer{
+    width: 100%;
+    max-width: 30vw;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    gap: 2rem;
+}
+
+.inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox > input{
+    flex: 1;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.inputBox >button{
+    background-color: gray;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.inputBox > button:hover{
+    background-color: #bdbbbb;
+    color: rgb(31, 25, 25);
+}
+
+.inputBox > button:active{
+    color: #3434f6;
+}
+
+.singleTodo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
