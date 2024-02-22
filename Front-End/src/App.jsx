@@ -25,10 +25,10 @@ function App() {
     try {
       let res = await axios.post(
         `${baceURL}/create`,
+        {title: inputs}, 
         {
           withCredentials: true,
         },
-        { todo: inputs }
       );
       // setAllTodos(res.data.data);
       setUpdateUI((prev) => !prev);
