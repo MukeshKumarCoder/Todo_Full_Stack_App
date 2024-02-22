@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const toDoSchema = mongoose.Schema(
   {
-    todo: String,
+    title: String,
     // required: true,
   },
   {

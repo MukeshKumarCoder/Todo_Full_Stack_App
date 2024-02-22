@@ -5,7 +5,8 @@ const toDoRouter = express.Router();
 
 toDoRouter.post("/create", async (req, res) => {
   try {
-    const todo = new ToDoModel(req.body);
+     const {title} = req.body;
+    const todo = new ToDoModel({title});
     await todo.save();
     
     res.send({ msg: "A new todo has been created", data: {todo} });
